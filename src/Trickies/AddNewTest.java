@@ -10,6 +10,8 @@ public static void main(String[] args) {
 	String reversedSecondHalf = new StringBuilder(secondHalf).reverse().toString();
 	String result = reversedSecondHalf + firstHalf;
 	System.out.println("Output: " + result);
+	System.out.println("Output2: " + result);
+
 }
 
 }
