@@ -27,7 +27,7 @@ public class AssetionTest {
 		
 		String megs="Welcome to Board";
 		Assert.assertFalse(megs.contains("board"),"Passed");
-
+System.out.println(l1);
 		
 
 		System.out.println("Exit");

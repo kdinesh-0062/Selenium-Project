@@ -1,3 +1,4 @@
+
 package Jpractice;
 
 public class Swaping {
@@ -7,18 +8,18 @@ public class Swaping {
 		
 		System.out.println(a + " "+ b);
 		// Logic 1 With third variable
-		/*
-		 * int t;
-		 *  t=a; //t=10
-		 *   a=b; //20
-		 *    b=t; //10
-		 * 
-		 */		
+		
+		  int t;
+		   t=a; //t=10
+		    a=b; //20
+		     b=t; //10
+		  
+		 		
 		
 		//Logic 2 Without third variable
-		/*a=a+b; // 10+20=30
+		a=a+b; // 10+20=30
 		b=a-b;  //30-20
-		a=a-b;  //30-10*/
+		a=a-b;  //30-10
 		
 		
 		

@@ -13,6 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record.ForDefinedMethod.WithAnnotationDefaultValue;
 
 public class WaitInterface {
 public static void main(String[] args) {
@@ -26,12 +29,17 @@ public static void main(String[] args) {
 		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("test"))
 		 * );
 		 */
+		
+		//Assert.assertTrue(driver.getCurrentUrl().contains("DashBoard"));
 
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 /*WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(10));
 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
 */
-FluentWait wait=new FluentWait(driver);
+FluentWait<WebDriver> wait=new FluentWait<>(driver)
+.withTimeout(Duration.ofSeconds(10))
+.pollingEvery(Duration.ofSeconds(2))
+.ignoring(NullPointerException.class);
 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
 WebElement Element = driver.findElement(By.xpath(""));
 JavascriptExecutor executor=(JavascriptExecutor)driver;

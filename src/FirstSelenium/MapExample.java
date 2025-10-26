@@ -14,11 +14,16 @@ public class MapExample {
 		System.out.println(mp);
 		
 		
-		  Set<Entry<String, String>> Aenty = mp.entrySet();
-		  System.out.println(Aenty);
+		  //Set<Entry<String, String>> Aenty = mp.entrySet();
+		  //System.out.println(Aenty);
 		  
+		Set<Entry<String, String>> entry = mp.entrySet();
+		System.out.println(entry);
+		
 		  
-		  
+		  for(Entry<String, String> en:entry) {
+			  System.out.println(en.getKey());
+		  }
 			/*
 			 * for(Entry<String, String>en:Aenty) { System.out.println(" Key " + en.getKey()
 			 * + " value " +en.getValue());

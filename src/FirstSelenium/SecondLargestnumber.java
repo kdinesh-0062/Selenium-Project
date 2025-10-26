@@ -32,10 +32,16 @@ public class SecondLargestnumber {
 					temp=a[i];
 					a[i]=a[j];
 					a[j]=temp;
-					
 				}
-			}}
-			System.out.println(a[1]);
+			}
+		}
+		
+		System.out.println(a[1]);
+		
+		/*
+		 * for(int i=0;i<a.length;i++) { System.out.println(a[i]); }
+		 */
 		}
 
 }
+

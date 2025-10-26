@@ -39,19 +39,25 @@ public class LaunchBrowser {
 		//List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div[@class='lnnVSe']"));
 		List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
 
-		int size = list.size();
+		//int size = list.size();
 		Thread.sleep(2000);
 		System.out.println(list.size());
 		
-		  for(int i=0;i<size;i++) 
-		  { System.out.println(list.get(i).getText());
-		  if(list.get(i).getText().contains("testing tool")){
-			  list.get(i).click();
-			  break;
-			  
-		  }
-		  }
-		
+		/*
+		 * for(int i=0;i<size;i++) { System.out.println(list.get(i).getText());
+		 * if(list.get(i).getText().contains("testing tool")){ list.get(i).click();
+		 * break;
+		 * 
+		 * } }
+		 */
+		for(WebElement ls:list) {
+			String text = ls.getText();
+			if(text.equalsIgnoreCase("Testing")) {
+				System.out.println(text);
+				ls.click();
+				break;
+			}
+		}
 		
 	}
 

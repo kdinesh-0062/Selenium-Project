@@ -1,29 +1,13 @@
 package FirstSelenium;
-
 public class CharaterUppercase {
-	public static void main(String[] args) {
-		 String str = "dInesh";
-		    String res = "";
-			/*
-			 * for (int i = 0; i < str.length(); i++) { char ch = str.charAt(i); if
-			 * (Character.isUpperCase(ch)) x += Character.toLowerCase(ch); else x +=
-			 * Character.toUpperCase(ch); } System.out.println(x);
-			 */
-		    for(int i=0;i<str.length();i++) {
-		    	char ch=str.charAt(i);
-		    	if(Character.isUpperCase(ch))
-		    		res+=Character.toLowerCase(ch);
-		    	else 
-		    		res +=Character.toUpperCase(ch);
-				}
-		    
-		    System.out.println(res);
-		    }
-		    
-		    
-		    
-		  }
-		
-	
+    public static void main(String[] args) {
+        String input = "Hello world"; // example string in lowercase
+ //input=input.toLowerCase();
+        // Check if the string is in lowercase, then convert to uppercase
+        if (input.equals(input)) {
+            input = input.toUpperCase(); // Convert to uppercase
+        }
 
-
+        System.out.println(input); // Output will be in uppercase
+    }
+}

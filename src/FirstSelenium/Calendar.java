@@ -21,6 +21,7 @@ public class Calendar {
 		
 		Thread.sleep(25000);
 		
+		
 		driver.findElement(By.xpath("//input[@id='form-field-travel_comp_date']")).click();
 		
 		while(!driver.findElement(By.className("datepicker-switch")).getText().contains("December")) {

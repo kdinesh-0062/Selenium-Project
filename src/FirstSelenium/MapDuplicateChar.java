@@ -29,10 +29,10 @@ public class MapDuplicateChar {
 			 * + e.getValue()); } }
 			 */
 
-		String name = "Selenium test";
-		//String name1=name.replaceAll("\\s", "");
-		char[] ch = name.toCharArray();
-		System.out.println(ch);
+		String name = "This is Automation interview";
+		String name1=name.replaceAll("\\s", "");
+		//char[] ch = name1.toLowerCase().toCharArray();
+		//System.out.println(ch);
 
 		/*
 		 * Map<Character,Integer> mp=new HashMap<Character, Integer>(); for(char c:ch) {
@@ -45,25 +45,24 @@ public class MapDuplicateChar {
 		 * } }
 		 */
 		// System.out.println(mp);
-		for (int i = 0; i < ch.length; i++) {
-			for (int j = i + 1; j < ch.length; j++) {
-				if (ch[i] == ch[j]) {
-					System.out.println(ch[i]);
-				}
+		/*
+		 * for (int i = 0; i < ch.length; i++) { for (int j = i + 1; j < ch.length; j++)
+		 * { if (ch[i] == ch[j]) { //System.out.print(ch[i]); }
+		 * 
+		 * } }
+		 */
 
-			}
-		}
-
-		Map<Character, Integer> mp = new HashMap<Character, Integer>();
-		for (char c : ch) {
-			if (mp.containsKey(c)) {
-				mp.put(c, mp.get(c) + 1);
-			} else {
-				mp.put(c, 1);
-			}
-
-		}
-
-		 System.out.println(mp);
+		
+		  Map<Character, Integer> mp = new HashMap<Character, Integer>();
+		  for (char c :name1.toCharArray())
+		  { if (mp.containsKey(c))
+		  {
+			  mp.put(c, mp.get(c) + 1); }
+		  else { mp.put(c,1); }
+		  
+		  }
+		  
+		  System.out.println(mp);
+		 
 	}
 }
